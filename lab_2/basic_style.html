@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        X Use <header> for the form title.
+        X Use <main> to wrap the form content.
+        X Include fields: Name, Email, Password, and a Submit button.
+        X Use <section> or <fieldset> to group form elements.
+        X Use <footer> for a "Terms and Conditions" link. 
+        ---
+        X Set a background color for the form using the background-color property.
+        X Add padding inside the form fields.
+        X Set margins around the form to center it on the page.
+        • Add a border around the form with rounded corners.
+            
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome static form</title>
+    <style>
+        main {
+            background: coral;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 3px solid color-mix(in srgb, coral 80%, black 20%);
+        }
+
+        form {
+            margin: auto;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Register</h1>
+    </header>
+    <main>
+        <form>
+            <br>
+            <br>
+            <label>
+                Username
+                <br>
+                <input type="text" name="username" min="2" value="JohnDoe" placeholder="Username">
+            </label>
+            <br>
+            <br>
+            <label>
+                Email
+                <br>
+                <input type="email" name="email" required placeholder="Email">
+            </label>
+            <br>
+            <br>
+            <label>
+                Telephone
+                <br>
+                <input type="tel" name="phone" id="">
+            </label>
+            <br><br>
+            <span>
+                Gender
+            </span>
+            <br>
+            <label>
+                Male
+                <input type="radio" name="gender" value="male" required>
+            </label>
+            <label>
+                Female
+                <input type="radio" name="gender" value="female">
+            </label>
+            <br><br>
+            <label>
+                Date of birth
+                <input type="date" name="data_of_birth" required>
+            </label>
+            <br><br>
+            <span>Do you like this lab?</span>
+            <br>
+            <label>
+                Yes ;)
+                <input type="radio" name="like" checked id="">
+            </label>
+            <label>
+                No :(
+                <input type="radio" name="like" checked id="">
+            </label>
+            <br><br>
+            <span><b>Rate our session</b></span>
+            <br>
+            <span>0</span>
+            <input type="range" min="0" max="100" step="10" value="50" name="rate" id="">
+            <span>10</span>
+            <br>
+            <br>
+            <fieldset>
+                <legend>Favorite Color</legend>
+                <br>
+                <select name="color">
+                    <option value="" disabled selected>--Select--</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+            </fieldset>
+            <br><br>
+            <span><b>Feedback</b></span>
+            <br>
+            <textarea name="feedback" placeholder="Write anything here (optional)" rows="6" cols="32"></textarea>
+            <br><br>
+            <span><b>Resume</b></span>
+            <br>
+            <input type="file" name="resume" id="">
+            <br><br>
+            <fieldset>
+                <legend>Favorite language</legend>
+                <br>
+                <label><input type="checkbox" name="language" value="arabic" required>Arabic</label>
+                <br>
+                <label><input type="checkbox" name="language" value="english">English</label>
+                <br>
+                <label><input type="checkbox" name="language" value="spanish">Spanish</label>
+                <br>
+                <label><input type="checkbox" name="language" value="french">French</label>
+            </fieldset>
+            <br><br>
+            <input type="hidden" name="security_key" value="XYZ">
+
+            <input type="password" name="password" required placeholder="Password">
+            <input type="password" name="password-confirmation" placeholder="Password (again)">
+            <br>
+            <br>
+            <br>
+            <button type="submit">Register</button>
+
+            <footer>
+                <p>By clicking register you accept the <a href="https://github.com/ilawy" target="_blank">Terms and
+                        Conditions</a></p>
+            </footer>
+        </form>
+    </main>
+</body>
+
+</html>

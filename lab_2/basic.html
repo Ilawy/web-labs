@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+    X Username. “The username field should not be empty set default value.”
+    X Password.
+    X Confirm Password.
+    X Phone Number: A tel input field . “The field should not be empty set default value.”
+    X Email.
+    X Gender: radio.
+    X Date of Birth
+    X Do you like this lab: Radio buttons with options Yes, No
+    X and select Yes by default XD
+    X Rate our Session: A range slider from 1 to 10 and put a default value.
+    X Favorite Color: A dropdown (select) with options like Red, Green, Blue, etc.
+    X Feedback: A textarea for additional comments.
+    X Upload Resume: A file input field to upload a resume.
+    X Select your fav language: checkbox
+    X Hidden Field: A hidden input field with a value that will be submitted with the form.
+    X Submit. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome static form</title>
+</head>
+
+<body>
+    <form>
+        <br>
+        <br>
+        <label>
+            Username
+            <br>
+            <input type="text" name="username" min="2" value="JohnDoe" placeholder="Username">
+        </label>
+        <br>
+        <br>
+        <label>
+            Email
+            <br>
+            <input type="email" name="email" required placeholder="Email">
+        </label>
+        <br>
+        <br>
+        <label>
+            Telephone
+            <br>
+            <input type="tel" name="phone" id="">
+        </label>
+        <br><br>
+        <span>
+            Gender
+        </span>
+        <br>
+        <label>
+            Male
+            <input type="radio" name="gender" value="male" required>
+        </label>
+        <label>
+            Female
+            <input type="radio" name="gender" value="female">
+        </label>
+        <br><br>
+        <label>
+            Date of birth
+            <input type="date" name="data_of_birth" required>
+        </label>
+        <br><br>
+        <span>Do you like this lab?</span>
+        <br>
+        <label>
+            Yes ;)
+            <input type="radio" name="like" checked id="">
+        </label>
+        <label>
+            No :(
+            <input type="radio" name="like" checked id="">
+        </label>
+        <br><br>
+        <span><b>Rate our session</b></span>
+        <br>
+        <span>0</span>
+        <input type="range" min="0" max="100" step="10" value="50" name="rate" id="">
+        <span>10</span>
+        <br>
+        <br>
+        <span><b>Favorite Color</b></span>
+        <br>
+        <select name="color">
+            <option value="" disabled selected>--Select--</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        <br><br>
+        <span><b>Feedback</b></span>
+        <br>
+        <textarea name="feedback" placeholder="Write anything here (optional)" rows="6" cols="32"></textarea>
+        <br><br>
+        <span><b>Resume</b></span>
+        <br>
+        <input type="file" name="resume" id="">
+        <br><br>
+        <span><b>Favorite language</b></span>
+        <br>
+        <label><input type="checkbox" name="language" value="arabic" required>Arabic</label>
+        <label><input type="checkbox" name="language" value="english">English</label>
+        <label><input type="checkbox" name="language" value="spanish">Spanish</label>
+        <label><input type="checkbox" name="language" value="french">French</label>
+        <br><br>
+        <input type="hidden" name="security_key" value="XYZ">
+
+        <input type="password" name="password" required placeholder="Password">
+        <input type="password" name="password-confirmation" placeholder="Password (again)">
+        <br>
+        <br>
+        <br>
+        <button type="submit">Register</button>
+
+
+    </form>
+</body>
+
+</html>

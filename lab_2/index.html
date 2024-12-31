@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome static form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Register</h1>
+        </header>
+        <form class="form">
+            <label class="field">
+                <span class="lebel">Username</span>
+                <input type="text" name="username" min="2" value="JohnDoe" placeholder="Username">
+            </label>
+
+
+            <label class="field">
+                Email
+                <input type="email" name="email" required placeholder="Email">
+            </label>
+
+
+            <label class="field">
+                Telephone
+                <input type="tel" name="phone" id="">
+            </label>
+            <section class="field-section">
+                <span class="label">
+                    Gender
+                </span>
+                <div class="radio-group">
+                    <label>
+                        Male
+                        <input type="radio" name="gender" value="male" required>
+                    </label>
+                    <label>
+                        Female
+                        <input type="radio" name="gender" value="female">
+                    </label>
+                </div>
+
+            </section>
+
+            <label class="field">
+                Date of birth
+                <input type="date" name="data_of_birth" required>
+            </label>
+
+            <section class="field-section">
+                <span>How do you feel about this course?</span>
+                <div class="radio-group">
+                    <label>
+                        😊 Happy
+                        <input type="radio" name="like" checked id="">
+                    </label>
+                    <label>
+                        ☹️ Sad
+                        <input type="radio" name="like" id="">
+                    </label>
+                </div>
+
+            </section>
+
+            <section class="field-section">
+                <span><b>Rate our session</b></span>
+                <div class="rate-group">
+                    <span>0</span>
+                    <input type="range" min="0" max="100" step="10" value="50" name="rate" id="">
+                    <span>10</span>
+                </div>
+
+            </section>
+
+
+            <fieldset>
+                <legend>Favorite Color</legend>
+
+                <select name="color">
+                    <option value="" disabled selected>--Select--</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+            </fieldset>
+
+            <span><b>Feedback</b></span>
+
+            <textarea name="feedback" placeholder="Write anything here (optional)" rows="6" cols="32"></textarea>
+
+            <span><b>Resume</b></span>
+
+            <input type="file" name="resume" id="">
+
+            <fieldset>
+                <legend>Favorite language</legend>
+
+                <label class="language-label"><input type="checkbox" name="language" value="arabic"
+                        required>Arabic</label>
+
+                <label class="language-label"><input type="checkbox" name="language" value="english">English</label>
+
+                <label class="language-label"><input type="checkbox" name="language" value="spanish">Spanish</label>
+
+                <label class="language-label"><input type="checkbox" name="language" value="french">French</label>
+            </fieldset>
+
+            <input type="hidden" name="security_key" value="XYZ">
+
+            <input type="password" name="password" required placeholder="Password">
+            <input type="password" name="password-confirmation" placeholder="Password (again)">
+
+
+
+            <button type="submit">Submit</button>
+
+            <footer>
+                <p>By clicking register you accept the <a href="https://github.com/ilawy" target="_blank">Terms and
+                        Conditions</a></p>
+            </footer>
+        </form>
+    </main>
+</body>
+
+</html>
