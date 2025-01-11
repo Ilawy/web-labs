@@ -7,6 +7,10 @@ jobs:
     name: Deploy to surge
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - name: list cwd
+        run: |
+          ls
       - name: Deploy to ma-web.surge.sh
         uses: dswistowski/surge-sh-action@v1
         with:
