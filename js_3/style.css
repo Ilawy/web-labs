@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+:root {
+    --primary: #C5D3E8;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+
+    gap: 1rem;
+
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+
+    max-width: 720px;
+
+    justify-self: center;
+    
+    padding: 1rem;
+    border: 1px solid;
+
+    .key {
+        background: var(--primary);
+        font-weight: 600;
+        box-shadow: 3px 3px 0px black;
+        transition: 325ms;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        position: relative;
+
+        max-width: 48px;
+
+        &:hover {
+            /* box-shadow: 3px 3px 0 3px black; */
+            scale: 1.05;
+            transform: translate(-3%, -3%);
+        }
+
+        &.wrong {
+            &::before {
+                content: "";
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                rotate: -45deg;
+                width: 110%;
+                height: 5px;
+                background: red;
+                position: absolute;
+            }
+        }
+    }
+}
+
+.display {
+    padding: 1rem;
+    border: 1px solid;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+
+    width: 100%;
+
+    .char {
+        width: 64px;
+        height: 64px;
+        background: var(--primary);
+        border-radius: .5rem;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+}
+
+.status {
+    display: flex;
+    flex: 1;
+
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+
+    .message {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
