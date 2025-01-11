@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button data-file="./task_1.js">Lab 1</button>
+    <button data-file="./task_2.js">Lab 2</button>
+    <button data-file="./task_3.js">Lab 3</button>
+    <script>
+        document.querySelectorAll("button[data-file]").forEach(btn=>{
+            btn.addEventListener("click", ev=>{
+                var script = document.createElement("script");
+                script.src = btn.getAttribute("data-file")
+                document.body.append(script)
+            })
+        })
+    </script>
+</body>
+</html>
