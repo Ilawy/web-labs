@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                border-radius: 0.25rem;
+                overflow-x: auto;
+
+            }
+            th {
+                background: #1d1616;
+                color: white;
+                padding: 1rem 0.5rem;
+                text-align: left;
+            }
+
+            td {
+                padding: 0.75rem 0.5rem;
+                
+            }
+            tr {
+                background: #e8f9ff;
+                transition: 325ms;
+
+                &:hover{
+                    background: #9B7EBD !important;
+                }
+
+                &:nth-child(odd){
+                    background: white;
+                }
+
+                &:last-child td{
+                    padding: 1.25rem 0.5rem;
+                }
+            }
+
+            .container{
+                border-radius: 1rem;
+                overflow: hidden;
+                border: 1px solid;
+            }
+
+            .posts{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+                li{
+                    padding: .75rem;
+                    border-radius: 0.5rem;
+                    background: #FBF5E5;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Company</th>
+                        <th>Address</th>
+                        <th>Posts</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+           
+                </tbody>
+            </table>
+        </div>
+        <script src="./lab_2.js"></script>
+    </body>
+</html>
