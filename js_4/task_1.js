@@ -4,7 +4,7 @@
 Array.prototype.average = function(){
     var total = 0;
     for(var i = 0; i < this.length; i++){
-        if(typeof this[i] !== "number")throw new Error(`Expected number got ${typeof this[i]}, this[${i}]`);
+        if(typeof this[i] !== "number" || !Number.isNaN(this[i]))throw new Error(`Expected number got ${typeof this[i]}, this[${i}]`);
         total += this[i];
     }
     return total / this.length
